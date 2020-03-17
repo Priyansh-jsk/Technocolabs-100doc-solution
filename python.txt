@@ -1,0 +1,200 @@
+					STRING EXERCISES
+
+**************************Solution=1****************************
+def char_frequency(str1):
+    dict = {}
+    for n in str1:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+print(char_frequency('google.com'))
+
+
+**************************Solution=3****************************
+def find_longest_word(words_list):
+    word_len = []
+    for n in words_list:
+        word_len.append((len(n), n))
+    word_len.sort()
+    return word_len[-1][1]
+
+print(find_longest_word(["neema", "priyansh", "ram"]))
+
+**************************Solution=4****************************
+def word_count(str):
+    counts = dict()
+    words = str.split()
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+    return counts
+print( word_count('Never give up ,Always go Ahead up'))
+
+**************************Solution=6****************************
+def vowel(text):
+    vowels = "aeiuoAEIOU"
+    print(len([letter for letter in text if letter in vowels]))
+    print([letter for letter in text if letter in vowels])
+vowel('PriyAnshneeMA');
+
+
+					LIST EXERCISES
+
+**************************Solution=1****************************
+def Enquiry(lis1): 
+    if len(lis1) == 0: 
+        return 0
+    else: 
+        return 1
+lis1 = [] 
+if Enquiry(lis1): 
+    print ("not empty") 
+else: 
+    print("Empty List")
+
+**************************Solution=2*****************************
+a = [1,2,3,4,5,3,5,5,2,5]
+dup_items = set()
+uniq_items = []
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+print(dup_items)
+
+**************************Solution=3*****************************
+def common_data(list1, list2):
+     result = False
+     for x in list1:
+         for y in list2:
+             if x == y:
+                 result = True
+                 return result
+print(common_data([1,2,3],[4,5,6,7]))
+print(common_data([1,2,3],[4,5,6,7]))
+
+
+***************************Solution=4****************************
+def Diff(li1, li2): 
+    return (list(set(li1) - set(li2)))  
+li1 = [1,2,30,3,4] 
+li2 = [2,4,3] 
+print(Diff(li1, li2))
+ 
+***************************Solution=7****************************
+list = [] 
+n = int(input("Enter number of elements : "))  
+for i in range(0, n): 
+    element = int(input()) 
+    list.append(element)  
+print(list)
+
+					Loops
+
+**************************Solution=1*****************************
+list1 = [1,2,3,4,5,6,7,8,9] 
+  even count, odd count = 0,0 
+for num in list1: 
+    # checking condition 
+    if num % 2 == 0: 
+        even_count += 1
+    else: 
+        odd_count += 1
+print("Even numbers in the list: ",even count) 
+print("Odd numbers in the list: ",odd count)
+
+
+**************************Solution=2*****************************
+for x in range(6):
+    if (x == 3 or x==6):
+        continue
+    print(x,end=' ')
+print("\n)
+
+
+**************************Solution=5*****************************
+n = int(input("Input a number: "))
+for i in range(1,11):
+   print(n,'x',i,'=',n*i)
+
+					Python Data types: Dictionary
+
+
+**************************Solution=1*****************************
+print('Enter the number: ')
+num = int(input())
+dict = {i:i*i for i in range(1,n)}
+print(dict)
+
+**************************Solution=8*****************************
+dict ={ 
+    "L1":[24,2,4,26,1] 
+    "L2":[27,5,7,6], 
+    "L3":[1,6,2,9], 
+    "L4":[40,3,21,7] } 
+print("\nBefore Sorting: ") 
+for x in dict.items(): 
+    print(x) 
+print("\nAfter Sorting: ") 
+  for i, j in dict.items(): 
+    sorted_dict ={i:sorted(j)} 
+    print(sorted_dict)
+
+					Tuple-Exercises
+
+
+**************************Solution=1*****************************
+diff type = ("priyansh", False, 1.2, 20)
+print(diff type)
+
+
+**************************Solution=5*****************************
+tuple = (786, 'abc', 'ram')
+print "First tuple length : ", len(tuple)
+
+
+**************************Solution=5*****************************
+tuplex = ((5,"p"),(7,"n"))
+print(dict((y,x) for x,y in tuplex))
+
+
+					Python Function
+
+**************************Solution=1*****************************
+def max_two( x, y ):
+    if x > y:
+        return x
+    return y
+def max_three( x, y, z ):
+    return max_two( x, max_two( y, z ) )
+print(max_three(23,35,6))
+
+**************************Solution=2*****************************
+def sum(n):
+    total = 0
+    for x in n:
+        total += x
+    return total
+print(sum((1,2,23,4,5)))
+
+**************************Solution=3*****************************
+def multiply(n):  
+    total = 1
+    for x in n:
+        total *= x  
+    return total  
+print(multiply((1,2,3,4,5)))
+
+**************************Solution=5*****************************
+def even_num(l):
+    enum = []
+    for n in l:
+        if n % 2 == 0:
+            enum.append(n)
+    return enum
+print(even_num([1,2,3,4,5,6,7,8,9,0]))
